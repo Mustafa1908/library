@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    background-color: rgb(190, 190, 190);
+  }
+
+  .header {
+    background-color: #f1f5f9;
+    height: 15vh;
+  
+  }
+
+  .library-title {
+    font-size: 3rem;
+    font-family: 'Lemon', serif;
+    padding-left: 5rem;
+  }
+
+   ::backdrop {
+    background-color: black;
+    opacity: 0.55;
+    display: flex;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 23rem;
+    height: auto;
+    margin: auto;
+  }
+
+  #title, #author, #pages {
+    height: 2.7rem;
+    border-radius: 0.5rem;
+  }
+
+  input[placeholder] {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.22rem;
+  }
+
+  label {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: auto;
+    margin: auto;
+    width: 18rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+  }
+
+  #read-no-read {
+    height: 1.3rem;
+    width: 3rem;
+    accent-color: #22c55e;
+  }
+
+  #read-no-read:hover {
+    cursor: pointer;
+  }
+
+  .submit-button {
+    height: 3.6rem;
+    width: 100%;
+    border-radius: 1.2rem ;
+  }
+
+  .submit-button:hover {
+    background-color: #a3e635;
+    cursor: pointer;
+  }
+
+  .submit-button[value] {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+  }
+
+
+  .add-book-text-container {
+    height: 100%;
+    padding-top: 1rem;;
+    display: flex;
+    justify-content: center;
+  }
+
+  .add-book-text {
+    font-size: 2.3rem;
+    font-family: 'Roboto', serif;
+    padding-top: 1.3rem;
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
+
+  .add-book-text:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+
+  .footer-text {
+    font-family: 'Roboto', serif;
+    font-size: 1.4rem;
+  }
+
+  .github-link:visited {
+    color: black;
+  }

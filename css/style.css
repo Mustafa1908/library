@@ -1,123 +1,159 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-  body {
-    background-color: rgb(190, 190, 190);
-  }
+body {
+  background-color: rgb(190, 190, 190);
+}
 
-  .header {
-    background-color: #f1f5f9;
-    height: 15vh;
-  
-  }
+.header {
+  background-color: #f1f5f9;
+  height: 15vh;
 
-  .library-title {
-    font-size: 3rem;
-    font-family: 'Lemon', serif;
-    padding-left: 5rem;
-  }
+}
 
-   ::backdrop {
-    background-color: black;
-    opacity: 0.55;
-    display: flex;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    width: 23rem;
-    height: auto;
-    margin: auto;
-  }
+.library-title {
+  font-size: 3rem;
+  font-family: 'Lemon', serif;
+  padding-left: 5rem;
+}
 
-  #title, #author, #pages {
-    height: 2.7rem;
-    border-radius: 0.5rem;
-  }
+ ::backdrop {
+  background-color: black;
+  opacity: 0.55;
+  display: flex;
+}
 
-  input[placeholder] {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.22rem;
-  }
+dialog {
+  border: 1px solid transparent;
+  height: auto;
+  margin: auto;
+  height: 19rem;
+}
 
-  label {
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    height: auto;
-    margin: auto;
-    width: 18rem;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.4rem;
-  }
+.form {
+display: flex;
+flex-direction: column;
+width: 23rem;
+}
 
-  #read-no-read {
-    height: 1.3rem;
-    width: 3rem;
-    accent-color: #22c55e;
-  }
+#title, #author, #pages {
+  height: 2.7rem;
+  border-radius: 0.5rem;
+}
 
-  #read-no-read:hover {
-    cursor: pointer;
-  }
+input[placeholder] {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.22rem;
+}
 
-  .submit-button {
-    height: 3.6rem;
-    width: 100%;
-    border-radius: 1.2rem ;
-  }
+label {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: auto;
+  margin: auto;
+  width: 18rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+}
 
-  .submit-button:hover {
-    background-color: #a3e635;
-    cursor: pointer;
-  }
+#read {
+  height: 1.3rem;
+  width: 3rem;
+  accent-color: #22c55e;
+}
 
-  .submit-button[value] {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.3rem;
-  }
+#read:hover {
+  cursor: pointer;
+}
 
+.submit-button {
+  height: 3.6rem;
+  margin-top: 0.56rem;
+  width: 100%;
+  border-radius: 1.2rem ;
+}
 
-  .add-book-text-container {
-    height: 100%;
-    padding-top: 1rem;;
-    display: flex;
-    justify-content: center;
-  }
+.submit-button:hover {
+  background-color: #a3e635;
+  cursor: pointer;
+}
 
-  .add-book-text {
-    font-size: 2.3rem;
-    font-family: 'Roboto', serif;
-    padding-top: 1.3rem;
-    background-color: transparent;
-    border: 1px solid transparent;
-  }
+.submit-button[value] {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+}
 
-  .add-book-text:hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
+.add-book-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-  .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.7rem;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-  }
+.add-book-text-container {
+  height: 100%;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
 
-  .footer-text {
-    font-family: 'Roboto', serif;
-    font-size: 1.4rem;
-  }
+.add-book-text {
+  font-size: 2.3rem;
+  font-family: 'Roboto', serif;
+  padding-top: 1.3rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
 
-  .github-link:visited {
-    color: black;
-  }
+.add-book-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.card-container {
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rem;
+  padding-left: 5rem;
+  padding-top: 5rem;
+}
+
+.card-container div {
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  width: 20rem;
+  height: 20rem;
+}
+
+.card-container div p {
+  font-size: 2rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-text {
+  font-family: 'Roboto', serif;
+  font-size: 1.4rem;
+}
+
+.github-link:visited {
+  color: black;
+}

@@ -22,29 +22,30 @@ function addBookToLibrary() {
 
 Book.prototype.toggleRead = function () {
   this.read = !this.read;
-}
+};
 
 function toggleRead(index) {
   myLibrary[index].toggleRead();
   render();
 }
 
-
 function render() {
-  for(let i = 0; i <= myLibrary.length; i ++) {
+  for (let i = 0; i <= myLibrary.length; i++) {
     let cards = document.querySelector(".card-container");
     cards.innerHTML = "";
-    for (let i = 0; i < myLibrary.length; i ++) {
+    for (let i = 0; i < myLibrary.length; i++) {
       let card = document.createElement("div");
       card.innerHTML = `
         <div>
-          <p>"${ myLibrary[i].title }"</p>
+          <p>"${myLibrary[i].title}"</p>
           <p>${myLibrary[i].author}</p>
-          <p>${myLibrary[i].pages}pages</p>
-          <button class="button-read" onclick="toggleRead(${i})">${myLibrary[i].read ? "Read" : "Not Read Yet"}</button>
+          <p>${myLibrary[i].pages} pages</p>
+          <button class="button-read" onclick="toggleRead(${i})">${
+        myLibrary[i].read ? "Read" : "Not Read Yet"
+      }</button>
           <button class="button-remove" onclick="removeBook(${i})">Remove</button>
         </div>
-      `
+      `;
       cards.appendChild(card);
     }
   }
@@ -56,23 +57,18 @@ function removeBook(index) {
   render();
 }
 
+let bookForm = document.querySelector(".form");
 
-let submit = document.querySelector(".submit-button");
-
-submit.addEventListener("click", function(event) {
+bookForm.addEventListener("submit", function (event) {
   event.preventDefault();
+  dialog.close();
   addBookToLibrary();
   render();
-})
-
+});
 
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector(".add-book-text");
 
 showButton.addEventListener("click", () => {
   dialog.showModal();
-});
-
-submit.addEventListener("click", () => {
-  dialog.close();
 });
